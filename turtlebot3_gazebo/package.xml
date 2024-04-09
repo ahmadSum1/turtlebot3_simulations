@@ -15,7 +15,9 @@
   <author email="pyo@robotis.com">Pyo</author>
   <author email="jhshim@robotis.com">Ryan Shim</author>
   <buildtool_depend>ament_cmake</buildtool_depend>
-  <depend>gazebo_ros_pkgs</depend>
+  <depend>ros_gz_bridge</depend>
+  <depend>ros_gz_image</depend>
+  <depend>ros_gz_sim</depend>
   <depend>geometry_msgs</depend>
   <depend>nav_msgs</depend>
   <depend>rclcpp</depend>
@@ -23,6 +25,6 @@
   <depend>tf2</depend>
   <export>
     <build_type>ament_cmake</build_type>
-    <gazebo_ros gazebo_model_path="${prefix}/models"/>
+    <!-- <gazebo_ros gazebo_model_path="${prefix}/models"/> -->
   </export>
 </package>

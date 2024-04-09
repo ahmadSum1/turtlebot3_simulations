@@ -20,8 +20,9 @@ endif()
 # Find ament packages and libraries for ament and system dependencies
 ################################################################################
 find_package(ament_cmake REQUIRED)
-# find_package(gazebo REQUIRED) # - gz-sim?
-# find_package(gazebo_ros_pkgs REQUIRED)
+find_package(ros_gz_sim REQUIRED) # - gz-sim?
+find_package(ros_gz_bridge REQUIRED)
+find_package(ros_gz_image REQUIRED)
 find_package(geometry_msgs REQUIRED)
 find_package(nav_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
@@ -70,7 +71,7 @@ install(TARGETS ${EXEC_NAME}
   DESTINATION lib/${PROJECT_NAME}
 )
 
-install(DIRECTORY launch models rviz urdf worlds
+install(DIRECTORY launch models params rviz urdf worlds
   DESTINATION share/${PROJECT_NAME}/
 )
 
